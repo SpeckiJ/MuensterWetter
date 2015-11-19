@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.ifgi.klimastationms"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/listViewRowHeight"
+    android:minHeight="@dimen/listViewRowHeight"
+    android:background="@color/clear"
+    android:orientation="horizontal" >
+
+    <View
+        android:id="@+id/middleView"
+        android:layout_width="@dimen/listViewRowMiddleViewWidth"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/clear" />
+
+    <com.ifgi.klimastationms.views.FontableTextView
+        android:id="@+id/textViewPhenomenonDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignBaseline="@+id/textViewPhenomenonValue"
+        android:layout_toLeftOf="@+id/middleView"
+        android:background="@color/clear"
+        android:gravity="right"
+        android:shadowColor="@color/textShadow"
+        android:shadowDx="@dimen/shadowOffsetX"
+        android:shadowDy="@dimen/shadowOffsetY"
+        android:shadowRadius="@dimen/shadowRadius"
+        android:textColor="@color/textMain"
+        android:textSize="@dimen/textSizeSecondary"
+        app:font="SourceSansPro-Regular.ttf" />
+
+    <com.ifgi.klimastationms.views.FontableTextView
+        android:id="@+id/textViewPhenomenonValue"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@+id/middleView"
+        android:shadowColor="@color/textShadow"
+        android:shadowDx="@dimen/shadowOffsetX"
+        android:shadowDy="@dimen/shadowOffsetY"
+        android:shadowRadius="@dimen/shadowRadius"
+        android:textColor="@color/textMain"
+        android:textSize="@dimen/textSizePrimary"
+        app:font="SourceSansPro-Bold.ttf" />
+
+    <com.ifgi.klimastationms.views.FontableTextView
+        android:id="@+id/textViewPhenomenonUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignBaseline="@+id/textViewPhenomenonValue"
+        android:layout_toRightOf="@+id/textViewPhenomenonValue"
+        android:shadowColor="@color/textShadow"
+        android:shadowDx="@dimen/shadowOffsetX"
+        android:shadowDy="@dimen/shadowOffsetY"
+        android:shadowRadius="@dimen/shadowRadius"
+        android:textColor="@color/textMain"
+        android:textSize="@dimen/textSizePrimary"
+        app:font="SourceSansPro-Bold.ttf" />
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MünsterWetter</string>
+    <string name="version">1.0 Beta 7</string>
+    <string name="database_name">weather_database</string>
+    <string name="webcam_url">http://geo1-dach-kamera.uni-muenster.de/record/current.jpg</string>
+    <string name="content_description_info_button">Info Button</string>
+    <string name="content_description_refresh_button">Refresh Button</string>
+    <string name="content_description_webcam_button">Webcam Button</string>
+    <string name="content_description_webcam_image">Webcam Image</string>
+    <string name="content_description_introduction_data">Current Data</string>
+    <string name="content_description_introduction_graph">Graph</string>
+    <string name="statusTextViewLoadingData">Lade Daten…</string>
+    <string name="webcamDescriptionText">Dies ist ein Live-Bild der Webcam, welche auf dem Dach des Instituts für Landschaftsökologie steht. Sie ist auf die Innenstadt ausgerichtet und zeigt den Dom, im Hintergrund den Fernsehturm, sowie im Vordergrund das Universitätsviertel.</string>
+   
+        <string name="seekBarLeftLabel">24 Std.</string>
+        <string name="seekBarRightLabel">20 Tage</string>
+        
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="title_activity_webcam">WebcamActivity</string>
+    <string name="title_activity_graph">GraphActivity</string>
+
+    <string name="introduction_title">MünsterWetter</string>
+    <string name="introduction_message_top">Diese App informiert dich jederzeit über die aktuelle Wetterlage in Münster. Die Daten werden von der Arbeitsgemeinschaft Klimatologie bereitgestellt.</string>    
+    <string name="introduction_message_bottom">Drehe das Handy um zur Diagramm-Ansicht zu gelangen. Dort kannst du Verlaufsdiagramme der letzten Tage sehen.</string>    
+    <string name="introduction_start_button">OK, los gehts!</string>    
+    
+    <string name="about_top_description">Diese App wird bereitgestellt im Namen des Instituts für Landschaftsökologie und der Arbeitsgemeinschaft Klimatologie</string>    
+    <string name="about_institute_name">Institut für Landschaftsökologie</string>    
+    <string name="about_klima_ag_name">AG Klimatologie</string>
+    <string name="about_button_station">Infos zur Wetterstation</string>
+    <string name="about_button_license">Über die Daten</string>
+    <string name="about_license_description_one">Bei den Daten handelt es sich um unkorrigierte Rohdaten. Sie werden unter der "Public Domain Dedication and License v1.0" zur Verfügung gestellt. Die Lizenz kann im Folgenden eingesehen werden:</string>
+	<string name="about_license_button_summary">Zusammenfassung</string>
+    <string name="about_license_button_full">Vollständige Version</string>
+    <string name="about_license_link_summary">http://opendatacommons.org/licenses/pddl/summary/</string>
+    <string name="about_license_link_full">http://www.opendatacommons.org/licenses/pddl/1.0/</string>
+
+	<string name="phenomenonDescriptionTemperature">Temperatur</string>
+    <string name="phenomenonDescriptionHumidity">Luftfeuchtigkeit</string>
+    <string name="phenomenonDescriptionAtmosphericPressure">Luftdruck</string>
+    <string name="phenomenonDescriptionWindSpeed">Windgeschw.</string>
+    <string name="phenomenonDescriptionWindSpeedBeaufort">Windstärke</string>
+    <string name="phenomenonDescriptionMaxWindSpeed">Stärkste Windböe</string>
+    <string name="phenomenonDescriptionWindDirection">Windrichtung</string>
+    <string name="phenomenonDescriptionRadiation">Einstrahlung</string>
+    <string name="phenomenonDescriptionVisibilty">Sichtweite</string>
+    <string name="phenomenonDescriptionWeathercode">Wettercode</string>
+    
+    <string name="phenomenonUnitTemperature">°C</string>
+    <string name="phenomenonUnitHumidity">%</string>
+    <string name="phenomenonUnitAtmosphericPressure">hPa</string>
+    <string name="phenomenonUnitWindSpeed">m/s</string>
+    <string name="phenomenonUnitWindSpeedBeaufort">Beaufort</string>
+    <string name="phenomenonUnitWindDirection">°</string>
+    <string name="phenomenonUnitRadiation">W/m²</string>
+    <string name="phenomenonUnitVisibility">m</string>
+    <string name="phenomenonUnitWeathercode"></string>
+    
+    <string-array name="wind_directions">
+        <item>N</item>
+        <item>NE</item>
+        <item>E</item>
+        <item>SE</item>
+        <item>S</item>
+        <item>SW</item>
+        <item>W</item>
+        <item>NW</item>
+    </string-array>
+    
+</resources>

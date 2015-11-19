@@ -1,0 +1,6 @@
+<resources>
+
+    <item name="numberOfGridViewColumns" format="integer" type="dimen">1</item>
+    <item name="numberOfSelectionGridViewColumns" format="integer" type="dimen">3</item>
+    
+</resources>

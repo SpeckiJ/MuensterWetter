@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res/com.ifgi.klimastationms"
+    android:id="@+id/relativeGraphLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    tools:context=".GraphActivity" >
+
+    <GridView
+        android:id="@+id/selectionGridView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/clear"
+        android:cacheColorHint="#00000000"
+        android:choiceMode="singleChoice"
+        android:clickable="true"
+        android:divider="@null"
+        android:gravity="center"
+        android:listSelector="#00000000"
+        android:numColumns="@dimen/numberOfSelectionGridViewColumns"
+        android:stretchMode="columnWidth" >
+    </GridView>
+
+    <com.ifgi.klimastationms.views.FontableTextView
+        android:id="@+id/leftTimeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="15dp"
+        android:shadowColor="@color/textShadow"
+        android:shadowDx="@dimen/shadowOffsetX"
+        android:shadowDy="@dimen/shadowOffsetY"
+        android:shadowRadius="@dimen/shadowRadius"
+        android:text="@string/seekBarLeftLabel"
+        android:textColor="@color/textMain"
+        android:textSize="@dimen/textSizeSecondary"
+        app:font="SourceSansPro-Regular.ttf" />
+
+    <com.ifgi.klimastationms.views.FontableTextView
+        android:id="@+id/rightTimeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="10dp"
+        android:gravity="right"
+        android:shadowColor="@color/textShadow"
+        android:shadowDx="@dimen/shadowOffsetX"
+        android:shadowDy="@dimen/shadowOffsetY"
+        android:shadowRadius="@dimen/shadowRadius"
+        android:text="@string/seekBarRightLabel"
+        android:textColor="@color/textMain"
+        android:textSize="@dimen/textSizeSecondary"
+        app:font="SourceSansPro-Regular.ttf" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="80dp"
+        android:layout_toLeftOf="@id/rightTimeLabel"
+        android:max="9"
+        android:layout_toRightOf="@id/leftTimeLabel"
+        android:paddingBottom="10dp"
+        android:progressDrawable="@drawable/line"
+        android:thumb="@drawable/circle" />
+
+    <LinearLayout
+        android:id="@+id/graphContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/seekBar"
+        android:layout_below="@id/selectionGridView"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" >
+    </LinearLayout>
+
+</RelativeLayout>

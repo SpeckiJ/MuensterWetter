@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.ifgi.klimastationms"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/buttonRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/buttonLayoutHeight"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+        <ImageButton
+            android:id="@+id/refreshButton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@+id/webcamButton"
+            android:adjustViewBounds="true"
+            android:background="@color/clear"
+            android:contentDescription="@string/content_description_refresh_button"
+            android:scaleType="center"
+            android:src="@drawable/refresh" />
+
+        <ImageButton
+            android:id="@+id/webcamButton"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:background="@color/clear"
+            android:contentDescription="@string/content_description_webcam_button"
+            android:scaleType="center"
+            android:src="@drawable/webcam" />
+
+        <ImageButton
+            android:id="@+id/infoButton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/webcamButton"
+            android:adjustViewBounds="true"
+            android:background="@color/clear"
+            android:contentDescription="@string/content_description_info_button"
+            android:scaleType="center"
+            android:src="@drawable/info" />
+    </RelativeLayout>
+
+    <com.ifgi.klimastationms.views.FontableTextView
+        android:id="@+id/temperatureTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonRelativeLayout"
+        android:gravity="center"
+        android:shadowColor="@color/textShadow"
+        android:shadowDx="@dimen/shadowOffsetX"
+        android:shadowDy="@dimen/shadowOffsetY"
+        android:shadowRadius="@dimen/shadowRadius"
+        android:textColor="@color/textMain"
+        android:textSize="@dimen/textSizeExtraLarge"
+        app:font="SourceSansPro-ExtraLight.ttf" />
+
+    <com.ifgi.klimastationms.views.FontableTextView
+        android:id="@+id/timeStampTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/temperatureTextView"
+        android:gravity="center"
+        android:shadowColor="@color/textShadow"
+        android:shadowDx="@dimen/shadowOffsetX"
+        android:shadowDy="@dimen/shadowOffsetY"
+        android:shadowRadius="@dimen/shadowRadius"
+        android:textColor="@color/textMain"
+        android:textSize="@dimen/textSizeSecondary"
+        app:font="SourceSansPro-Regular.ttf" />
+
+    <GridView
+        android:id="@+id/weatherDataGridView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/timeStampTextView"
+        android:layout_centerHorizontal="true"
+        android:background="@color/clear"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:gravity="center"
+        android:listSelector="#00000000"
+        android:numColumns="@dimen/numberOfGridViewColumns"
+        android:paddingTop="20dp"
+        android:stretchMode="columnWidth" >
+    </GridView>
+
+</RelativeLayout>

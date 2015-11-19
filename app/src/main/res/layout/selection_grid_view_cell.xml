@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.ifgi.klimastationms"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@layout/list_item_background"
+    android:orientation="horizontal" >
+
+    <com.ifgi.klimastationms.views.FontableTextView
+        android:id="@+id/selectionTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:background="@color/clear"
+        android:gravity="center"
+        android:shadowColor="@color/textShadow"
+        android:shadowDx="@dimen/shadowOffsetX"
+        android:shadowDy="@dimen/shadowOffsetY"
+        android:shadowRadius="@dimen/shadowRadius"
+        android:textColor="@color/textMain"
+        android:textSize="@dimen/textSizeSecondary"
+        app:font="SourceSansPro-Regular.ttf" />
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>
+
+    <item name="numberOfGridViewColumns" format="integer" type="dimen">1</item>
+    <item name="numberOfSelectionGridViewColumns" format="integer" type="dimen">3</item>
+    
+    <dimen name="graphViewPaddingBottom">50dp</dimen>
+    <dimen name="graphViewPaddingTop">50dp</dimen>
+</resources>

@@ -1,0 +1,33 @@
+<resources>
+    <dimen name="buttonLayoutHeight">50dp</dimen>
+    <dimen name="logoLayoutHeight">100dp</dimen>
+    
+    <dimen name="textSizePrimary">18dp</dimen>
+    <dimen name="textSizeSecondary">16dp</dimen>
+    <dimen name="textSizeTitle">24dp</dimen>
+    <dimen name="textSizeLarge">34dp</dimen>
+    <dimen name="textSizeExtraLarge">80dp</dimen>
+    
+    <dimen name="listViewRowHeight">35dp</dimen>
+    <dimen name="listViewRowMiddleViewWidth">0dp</dimen>
+    
+    <dimen name="graphViewPadding">0dp</dimen>
+
+    <color name="white">#FFFFFF</color>
+    <color name="graphGridColor">#33FFFFFF</color>
+    <color name="graphLineColorPrimary">#FFFFFF</color>
+    <color name="graphLineColorSecondary">#55FFFFFF</color>
+    <color name="graphBackgroundColor">#22FFFFFF</color>
+    <color name="textMain">#EEEEEE</color>
+    <color name="textShadow">#666666</color>
+    <color name="backgroundGradientStart">#5FbEf1</color>
+    <color name="backgroundGradientEnd">#0F6Ea1</color>
+    <color name="clear">#00010101</color>
+    <color name="listItemSelected">#77FFFFFF</color>
+
+    <item name="backgroundGradientAngle" format="float" type="dimen">270</item>
+    
+    <item name="shadowOffsetX" format="float" type="dimen">0.0</item>
+    <item name="shadowOffsetY" format="float" type="dimen">1.0</item>
+    <item name="shadowRadius" format="float" type="dimen">1.0</item>
+</resources>

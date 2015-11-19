@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ifgi.klimastationms"
+    android:versionCode="1"
+    android:versionName="1.0.2" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        <activity android:name="com.ifgi.klimastationms.activities.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.WebcamActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activities.AboutActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activities.IntroductionActivity"
+            android:label="@string/introduction_title" android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".activities.StationDescriptionActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.LicenseActivity" android:screenOrientation="portrait"></activity>
+    </application>
+
+</manifest>

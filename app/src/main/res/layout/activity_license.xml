@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.ifgi.klimastationms"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@layout/background_gradient"
+    android:orientation="vertical" >
+
+    <com.ifgi.klimastationms.views.FontableTextView
+        android:id="@+id/titleTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:shadowColor="@color/textShadow"
+        android:shadowDx="@dimen/shadowOffsetX"
+        android:shadowDy="@dimen/shadowOffsetY"
+        android:shadowRadius="@dimen/shadowRadius"
+        android:text="@string/about_button_license"
+        android:textColor="@color/textMain"
+        android:textSize="@dimen/textSizeLarge"
+        app:font="SourceSansPro-Light.ttf" />
+
+    <com.ifgi.klimastationms.views.FontableTextView
+        android:id="@+id/descriptionTextViewOne"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTextView"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:shadowColor="@color/textShadow"
+        android:shadowDx="@dimen/shadowOffsetX"
+        android:shadowDy="@dimen/shadowOffsetY"
+        android:shadowRadius="@dimen/shadowRadius"
+        android:text="@string/about_license_description_one"
+        android:textColor="@color/textMain"
+        android:textSize="@dimen/textSizePrimary"
+        app:font="SourceSansPro-Regular.ttf" />
+
+    <Button
+        android:id="@+id/buttonLinkLicenseSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descriptionTextViewOne"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@color/graphGridColor"
+        android:padding="10dp"
+        android:shadowColor="@color/textShadow"
+        android:shadowDx="@dimen/shadowOffsetX"
+        android:shadowDy="@dimen/shadowOffsetY"
+        android:shadowRadius="@dimen/shadowRadius"
+        android:text="@string/about_license_button_summary"
+        android:textColor="@color/textMain"
+        android:textSize="@dimen/textSizeTitle" />
+
+    <Button
+        android:id="@+id/buttonLinkLicenseFull"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonLinkLicenseSummary"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@color/graphGridColor"
+        android:padding="10dp"
+        android:shadowColor="@color/textShadow"
+        android:shadowDx="@dimen/shadowOffsetX"
+        android:shadowDy="@dimen/shadowOffsetY"
+        android:shadowRadius="@dimen/shadowRadius"
+        android:text="@string/about_license_button_full"
+        android:textColor="@color/textMain"
+        android:textSize="@dimen/textSizeTitle" />
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:baselineAligned="false"
+    android:background="@layout/background_gradient"
+    android:layout_height="fill_parent">
+
+    <fragment android:name="com.ifgi.klimastationms.fragments.CurrentDataFragment"
+              android:id="@+id/currentDataFragment"
+              android:layout_weight="0.7"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" />
+
+    <fragment android:name="com.ifgi.klimastationms.fragments.GraphFragment"
+              android:id="@+id/graphFragment"
+              android:layout_weight="0.3"
+              android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/graphViewPaddingBottom"
+        android:layout_marginTop="@dimen/graphViewPaddingTop"
+              android:layout_height="match_parent" />
+</LinearLayout>

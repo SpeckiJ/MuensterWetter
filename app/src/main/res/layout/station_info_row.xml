@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.ifgi.klimastationms"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@layout/list_item_background"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical" >
+
+    <com.ifgi.klimastationms.views.FontableTextView
+        android:id="@+id/textViewInfoTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/clear"
+        android:shadowColor="@color/textShadow"
+        android:shadowDx="@dimen/shadowOffsetX"
+        android:shadowDy="@dimen/shadowOffsetY"
+        android:shadowRadius="@dimen/shadowRadius"
+        android:textColor="@color/textMain"
+        android:textSize="@dimen/textSizeTitle"
+        app:font="SourceSansPro-Bold.ttf" />
+
+    <com.ifgi.klimastationms.views.FontableTextView
+        android:id="@+id/textViewInfoDetail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:layout_below="@id/textViewInfoTitle"
+        android:shadowColor="@color/textShadow"
+        android:shadowDx="@dimen/shadowOffsetX"
+        android:layout_marginTop="8dp"
+        android:shadowDy="@dimen/shadowOffsetY"
+        android:shadowRadius="@dimen/shadowRadius"
+        android:textColor="@color/textMain"
+        android:textSize="@dimen/textSizePrimary"
+        app:font="SourceSansPro-Regular.ttf" />
+</RelativeLayout>
