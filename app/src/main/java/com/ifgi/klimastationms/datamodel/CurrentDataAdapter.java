@@ -34,11 +34,13 @@ public class CurrentDataAdapter extends BaseAdapter
     	if (context == null)
     	{
     		Log.e("", "Context null");
+			throw new NullPointerException("Context is null");
     	}
 
     	if (weatherData == null)
     	{
     		Log.e("", "weatherData null");
+			throw new NullPointerException("WeatherData is null");
     	}
     	
     	this.context = context;
