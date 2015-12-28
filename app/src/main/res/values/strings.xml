@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">MünsterWetter</string>
-    <string name="version">1.0 Beta 7</string>
+    <string name="version">1.0.3</string>
     <string name="database_name">weather_database</string>
     <string name="webcam_url">http://geo1-dach-kamera.uni-muenster.de/record/current.jpg</string>
     <string name="content_description_info_button">Info Button</string>
@@ -47,7 +47,9 @@
     <string name="phenomenonDescriptionRadiation">Einstrahlung</string>
     <string name="phenomenonDescriptionVisibilty">Sichtweite</string>
     <string name="phenomenonDescriptionWeathercode">Wettercode</string>
-    
+    <string name="phenomenonDescriptionCloudAmount">Bedeckungsgrad</string>
+    <string name="phenomenonDescriptionCloudHeight">Wolkenhöhe</string>
+
     <string name="phenomenonUnitTemperature">°C</string>
     <string name="phenomenonUnitHumidity">%</string>
     <string name="phenomenonUnitAtmosphericPressure">hPa</string>
@@ -57,6 +59,8 @@
     <string name="phenomenonUnitRadiation">W/m²</string>
     <string name="phenomenonUnitVisibility">m</string>
     <string name="phenomenonUnitWeathercode"></string>
+    <string name="phenomenonUnitCloudAmount"></string>
+    <string name="phenomenonUnitCloudHeight">m</string>
     
     <string-array name="wind_directions">
         <item>N</item>

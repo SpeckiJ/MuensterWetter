@@ -7,6 +7,7 @@ import java.util.Locale;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.text.Html;
 
 import com.ifgi.klimastationms.R;
 import com.jjoe64.graphview.GraphView.GraphViewData;
@@ -27,6 +28,8 @@ public class WeatherData
 	private double visibility;
 	private double weatherCode;
 	private String weatherCodeDescription;
+	private String cloudAmount;
+	private String cloudHeight;
 
 	public WeatherData()
 	{
@@ -42,6 +45,8 @@ public class WeatherData
 		this.visibility = INITIAL_VALUE;
 		this.weatherCode = INITIAL_VALUE;
 		this.weatherCodeDescription = "";
+		this.cloudHeight = " ";
+		this.cloudAmount = " ";
 	}
 
 	public String getWeatherCodeDescription()
@@ -51,7 +56,8 @@ public class WeatherData
 
 	public void setWeatherCodeDescription(String weatherCodeDescription)
 	{
-		this.weatherCodeDescription = weatherCodeDescription;
+		// We need to decode html entities
+		this.weatherCodeDescription = Html.fromHtml(weatherCodeDescription).toString();
 	}
 
 	public Date getTimestamp()
@@ -241,6 +247,22 @@ public class WeatherData
 	public GraphViewData getGraphViewDataForField(int index, String columnName)
 	{				
 		return new GraphViewData(1, 1);
+	}
+
+	public void setCloudHeight(String cloudHeight){
+		this.cloudHeight = cloudHeight;
+	}
+
+	public String getCloudHeight() {
+		return this.cloudHeight;
+	}
+
+	public void setCloudAmount(String cloudAmount){
+		this.cloudAmount = cloudAmount;
+	}
+
+	public String getCloudAmount() {
+		return this.cloudAmount;
 	}
 
 }

@@ -22,6 +22,8 @@ public class CurrentDataAdapter extends BaseAdapter
 	private static final int RADIATION = 6;
 	private static final int VISIBILITY = 7;
 	private static final int WEATHER_CODE = 8;
+	private static final int CLOUD_AMOUNT = 9;
+	private static final int CLOUD_HEIGHT = 10;
 
 	private WeatherData weatherData;
     private LayoutInflater layoutInflater;
@@ -47,7 +49,7 @@ public class CurrentDataAdapter extends BaseAdapter
     @Override
     public int getCount()
     {
-        return 9;
+        return 11;
     }
  
     @Override
@@ -128,6 +130,16 @@ public class CurrentDataAdapter extends BaseAdapter
 			case WEATHER_CODE:
 				phenomenonDescription = this.context.getString(R.string.phenomenonDescriptionWeathercode);
 				phenomenonValue = this.weatherData.getWeatherCodeDescription();
+				phenomenonUnit = this.context.getString(R.string.phenomenonUnitWeathercode);
+				break;
+			case CLOUD_AMOUNT:
+				phenomenonDescription = this.context.getString(R.string.phenomenonDescriptionCloudAmount);
+				phenomenonValue = this.weatherData.getCloudAmount();
+				phenomenonUnit = this.context.getString(R.string.phenomenonUnitWeathercode);
+				break;
+			case CLOUD_HEIGHT:
+				phenomenonDescription = this.context.getString(R.string.phenomenonDescriptionCloudHeight);
+				phenomenonValue = this.weatherData.getCloudHeight();
 				phenomenonUnit = this.context.getString(R.string.phenomenonUnitWeathercode);
 				break;
 			default:

@@ -29,11 +29,12 @@ public class FileDownloader implements WeatherDataProvider
 		WINDSPEED_BEAUFORT("Windgeschwindigkeit (Beaufort)", "http://www.uni-muenster.de/Klima/data/0003wshg_de_bft.txt"),
 		WINDSPEED_MAXIMUM("Windgeschwindigkeit (max)", "http://www.uni-muenster.de/Klima/data/0016wshgmx_de.txt"),
 		DIRECTION("Windrichtung", "http://www.uni-muenster.de/Klima/data/0004wdhg_de.txt"),
-		RADIATION("Kurzwellige Einstrahlung",
-				"http://www.uni-muenster.de/Klima/data/0014sihg_de_html.txt"),
+		RADIATION("Kurzwellige Einstrahlung", "http://www.uni-muenster.de/Klima/data/0014sihg_de_html.txt"),
 		VISIBILITY("Sichtweite", "http://www.uni-muenster.de/Klima/data/0006vihg_de_html.txt"),
 		WEATHERCODE("Wettercode", "http://www.uni-muenster.de/Klima/data/0007cdhg_de.txt"),
-		WEATHERCODE_DESCRIPTION("Wettercode (Beschreibung)", "http://www.uni-muenster.de/Klima/data/0007cdhg_de_txt.txt");
+		WEATHERCODE_DESCRIPTION("Wettercode (Beschreibung)", "http://www.uni-muenster.de/Klima/data/0007cdhg_de_txt.txt"),
+		CLOUD_AMOUNT("Bedeckungsgrad", "http://www.uni-muenster.de/Klima/data/0017behg_de.txt"),
+		CLOUD_HEIGHT("Wolkenhöhe", "http://www.uni-muenster.de/Klima/data/0017whhg_de.txt");
 
 		private final String title;
 		private final String downloadURL;
@@ -74,7 +75,7 @@ public class FileDownloader implements WeatherDataProvider
 	private static final String FILENAME_POTENTIAL_RADIATION_24h = "http://www.uni-muenster.de/Klima/data/PotRad_24h.txt";
 	private static final String FILENAME_POTENTIAL_RADIATION_5d = "http://www.uni-muenster.de/Klima/data/PotRad_05d.txt";
 	private static final String FILENAME_POTENTIAL_RADIATION_20d = "http://www.uni-muenster.de/Klima/data/PotRad_20d.txt";
-	
+
 	CurrentDataCompletionHandler currentDataCompletionHandler;
 	ArchiveDataCompletionHandler archiveDataCompletionHandler;
 
@@ -288,7 +289,11 @@ public class FileDownloader implements WeatherDataProvider
 				publishProgress(currentWeatherData);
 				currentWeatherData.setWeatherCode(this.getDoubleFromWeatherDataFile(DataFile.WEATHERCODE));
 				currentWeatherData.setWeatherCodeDescription(this.getStringFromWeatherDataFile(DataFile.WEATHERCODE_DESCRIPTION));
-				publishProgress(currentWeatherData); 
+				publishProgress(currentWeatherData);
+				currentWeatherData.setCloudAmount(this.getStringFromWeatherDataFile(DataFile.CLOUD_AMOUNT));
+				publishProgress(currentWeatherData);
+				currentWeatherData.setCloudHeight(this.getStringFromWeatherDataFile(DataFile.CLOUD_HEIGHT));
+				publishProgress(currentWeatherData);
 			}
 			catch (ParseException parseException)
 			{
@@ -321,24 +326,36 @@ public class FileDownloader implements WeatherDataProvider
 
 		private double getDoubleFromWeatherDataFile(DataFile dataFile) throws IOException
 		{
-			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new URL(dataFile.getDownloadURL()).openStream(), "UTF-8"));
-			String inputString = bufferedReader.readLine().replaceAll("[^\\d.,-]", "").replace(",", ".");
-			return Double.parseDouble(inputString == "" ? "0" : inputString);
+			try{
+				BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new URL(dataFile.getDownloadURL()).openStream(), "UTF-8"));
+				String inputString = bufferedReader.readLine().replaceAll("[^\\d.,-]", "").replace(",", ".");
+				return Double.parseDouble(inputString == "" ? "0" : inputString);
+			} catch(Exception e) {
+			}
+			return Double.NaN;
+
 		}
 
 		private Date getDateFromWeatherDataFile(DataFile dataFile) throws IOException, ParseException
 		{
-			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new URL(dataFile.getDownloadURL()).openStream(), "UTF-8"));
-			String inputString = bufferedReader.readLine();
-
-			return new SimpleDateFormat("dd.MM.yyyy HH:mm").parse(inputString);
+			try {
+				BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new URL(dataFile.getDownloadURL()).openStream(), "UTF-8"));
+				String inputString = bufferedReader.readLine();
+				return new SimpleDateFormat("dd.MM.yyyy HH:mm").parse(inputString);
+			} catch(Exception e) {
+			}
+			return null;
 		}
 
 		private String getStringFromWeatherDataFile(DataFile dataFile) throws IOException
 		{
-			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new URL(dataFile.getDownloadURL()).openStream(), "UTF-8"));
-			String inputString = bufferedReader.readLine();
-			return inputString;
+			try {
+				BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new URL(dataFile.getDownloadURL()).openStream(), "UTF-8"));
+				String inputString = bufferedReader.readLine();
+				return inputString;
+			} catch(Exception e) {
+			}
+			return null;
 		}
 
 	}

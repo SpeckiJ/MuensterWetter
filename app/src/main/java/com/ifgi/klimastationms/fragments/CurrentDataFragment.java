@@ -118,11 +118,9 @@ public class CurrentDataFragment extends Fragment
 
 	private void setupListeners()
 	{
-		this.refreshButton.setOnClickListener(new OnClickListener()
-		{
+		this.refreshButton.setOnClickListener(new OnClickListener() {
 			@Override
-			public void onClick(View arg0)
-			{
+			public void onClick(View arg0) {
 				CurrentDataFragment.this.setRefreshButtonRotating(true);
 				CurrentDataFragment.this.dataProvider.loadCurrentWeatherData(CurrentDataFragment.this.getCompletionHandler());
 			}
@@ -137,11 +135,9 @@ public class CurrentDataFragment extends Fragment
 			}
 		});
   
-		this.webcamButton.setOnClickListener(new OnClickListener()
-		{
+		this.webcamButton.setOnClickListener(new OnClickListener() {
 			@Override
-			public void onClick(View arg0)
-			{
+			public void onClick(View arg0) {
 				CurrentDataFragment.this.fragmentListener.onWebcamButtonPressed(CurrentDataFragment.this.infoButton);
 			}
 		});
@@ -162,7 +158,9 @@ public class CurrentDataFragment extends Fragment
 		this.temperatureTextView.setText(String.format(Locale.getDefault(), "%.1f °C", weatherData.getTemperature()));
 
 		SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy HH:mm");
-		this.timestampTextView.setText(dateFormat.format(weatherData.getTimestamp()) + " MEZ");
+		if(weatherData.getTimestamp() != null) {
+			this.timestampTextView.setText(dateFormat.format(weatherData.getTimestamp()) + " MEZ");
+		}
 
 		this.currentDataGridView.setAdapter(new CurrentDataAdapter(this.getActivity(), weatherData));
 	}
