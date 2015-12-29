@@ -116,7 +116,7 @@ public class CurrentDataAdapter extends BaseAdapter
 				break;
 			case WIND_DIRECTION:
 				phenomenonDescription = this.context.getString(R.string.phenomenonDescriptionWindDirection);
-				phenomenonValue = String.format("%s - %.0f", this.weatherData.getWindDirectionDescription(this.context), this.weatherData.getWindDirection());
+				phenomenonValue = String.format("%s  %.0f", this.weatherData.getWindDirectionDescription(this.context), this.weatherData.getWindDirection());
 				phenomenonUnit = this.context.getString(R.string.phenomenonUnitWindDirection);
 				break;
 			case RADIATION:

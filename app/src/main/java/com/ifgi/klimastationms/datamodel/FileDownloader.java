@@ -343,7 +343,7 @@ public class FileDownloader implements WeatherDataProvider
 				BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new URL(dataFile.getDownloadURL()).openStream(), "UTF-8"));
 				String inputString = bufferedReader.readLine();
 				SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm");
-				sdf.setTimeZone(TimeZone.getTimeZone("GMT+1"));
+				sdf.setTimeZone(TimeZone.getTimeZone("GMT+1")); // timestamps returned from the server are always GMT+1/MEZ
 				return sdf.parse(inputString);
 			} catch(Exception e) {
 			}
