@@ -3,6 +3,7 @@ package com.ifgi.klimastationms.fragments;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.TimeZone;
 
 import android.app.Activity;
 import android.os.AsyncTask.Status;
@@ -159,7 +160,8 @@ public class CurrentDataFragment extends Fragment
 
 		SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy HH:mm");
 		if(weatherData.getTimestamp() != null) {
-			this.timestampTextView.setText(dateFormat.format(weatherData.getTimestamp()) + " MEZ");
+			dateFormat.setTimeZone(TimeZone.getDefault());;
+			this.timestampTextView.setText(dateFormat.format(weatherData.getTimestamp()));
 		}
 
 		this.currentDataGridView.setAdapter(new CurrentDataAdapter(this.getActivity(), weatherData));

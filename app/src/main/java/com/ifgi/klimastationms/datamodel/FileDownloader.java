@@ -15,6 +15,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.TimeZone;
 
 @SuppressLint("SimpleDateFormat")
 public class FileDownloader implements WeatherDataProvider
@@ -341,7 +342,9 @@ public class FileDownloader implements WeatherDataProvider
 			try {
 				BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new URL(dataFile.getDownloadURL()).openStream(), "UTF-8"));
 				String inputString = bufferedReader.readLine();
-				return new SimpleDateFormat("dd.MM.yyyy HH:mm").parse(inputString);
+				SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm");
+				sdf.setTimeZone(TimeZone.getTimeZone("GMT+1"));
+				return sdf.parse(inputString);
 			} catch(Exception e) {
 			}
 			return null;
