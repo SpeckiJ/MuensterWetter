@@ -36,6 +36,7 @@ public class StationDescriptionActivity extends Activity
 		dataArray.add(this.createHashmapWithTitleAndDetail("Luftdruck", "Young Typ 61302V\nKapazitiver Drucksensor"));
 		dataArray.add(this.createHashmapWithTitleAndDetail("Kurzwellige Strahlung", "Kipp & Zonen Typ CMP6 Pyranometer"));
 		dataArray.add(this.createHashmapWithTitleAndDetail("Sichtweite", "Present Weather Sensor Biral SWS100"));
+		dataArray.add(this.createHashmapWithTitleAndDetail("Wolkenhöhe und ‑bedeckungsgrad", "Lufft Ceilometer CHM 15k \"Nimbus\""));
 		
 		ListView listView = (ListView)this.findViewById(R.id.stationInfoListView);
 		listView.setAdapter(new StationInfoListAdapter(this, dataArray));
@@ -67,6 +68,9 @@ public class StationDescriptionActivity extends Activity
 						break;
 					case 6:
 						uriString = "http://www.uni-muenster.de/Klima/wetter/sichtweite.shtml";
+						break;
+					case 7:
+						uriString = "http://www.uni-muenster.de/Klima/wetter/Ceilometer.shtml";
 						break;
 					default:
 						break;
