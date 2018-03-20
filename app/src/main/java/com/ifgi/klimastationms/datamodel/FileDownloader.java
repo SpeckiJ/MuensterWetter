@@ -22,20 +22,20 @@ public class FileDownloader implements WeatherDataProvider
 {
 	private enum DataFile
 	{
-		TIMESTAMP("Zeit", "http://www.uni-muenster.de/Klima/data/time_de.txt"),
-		TEMPERATURE("Temperatur", "http://www.uni-muenster.de/Klima/data/0001tdhg_de.txt"),
-		HUMIDITY("Relative Luftfeuchte", "http://www.uni-muenster.de/Klima/data/0002rhhg_de.txt"),
-		PRESSURE("Luftdruck", "http://www.uni-muenster.de/Klima/data/0005aphg_de.txt"),
-		WINDSPEED("Windgeschwindigkeit", "http://www.uni-muenster.de/Klima/data/0003wshg_de.txt"),
-		WINDSPEED_BEAUFORT("Windgeschwindigkeit (Beaufort)", "http://www.uni-muenster.de/Klima/data/0003wshg_de_bft.txt"),
-		WINDSPEED_MAXIMUM("Windgeschwindigkeit (max)", "http://www.uni-muenster.de/Klima/data/0016wshgmx_de.txt"),
-		DIRECTION("Windrichtung", "http://www.uni-muenster.de/Klima/data/0004wdhg_de.txt"),
-		RADIATION("Kurzwellige Einstrahlung", "http://www.uni-muenster.de/Klima/data/0014sihg_de_html.txt"),
-		VISIBILITY("Sichtweite", "http://www.uni-muenster.de/Klima/data/0006vihg_de_html.txt"),
-		WEATHERCODE("Wettercode", "http://www.uni-muenster.de/Klima/data/0007cdhg_de.txt"),
-		WEATHERCODE_DESCRIPTION("Wettercode (Beschreibung)", "http://www.uni-muenster.de/Klima/data/0007cdhg_de_txt.txt"),
-		CLOUD_AMOUNT("Bedeckungsgrad", "http://www.uni-muenster.de/Klima/data/0017behg_de.txt"),
-		CLOUD_HEIGHT("Wolkenhöhe", "http://www.uni-muenster.de/Klima/data/0017whhg_de.txt");
+		TIMESTAMP("Zeit", "https://www.uni-muenster.de/Klima/data/time_de.txt"),
+		TEMPERATURE("Temperatur", "https://www.uni-muenster.de/Klima/data/0001tdhg_de.txt"),
+		HUMIDITY("Relative Luftfeuchte", "https://www.uni-muenster.de/Klima/data/0002rhhg_de.txt"),
+		PRESSURE("Luftdruck", "https://www.uni-muenster.de/Klima/data/0005aphg_de.txt"),
+		WINDSPEED("Windgeschwindigkeit", "https://www.uni-muenster.de/Klima/data/0003wshg_de.txt"),
+		WINDSPEED_BEAUFORT("Windgeschwindigkeit (Beaufort)", "https://www.uni-muenster.de/Klima/data/0003wshg_de_bft.txt"),
+		WINDSPEED_MAXIMUM("Windgeschwindigkeit (max)", "https://www.uni-muenster.de/Klima/data/0016wshgmx_de.txt"),
+		DIRECTION("Windrichtung", "https://www.uni-muenster.de/Klima/data/0004wdhg_de.txt"),
+		RADIATION("Kurzwellige Einstrahlung", "https://www.uni-muenster.de/Klima/data/0014sihg_de_html.txt"),
+		VISIBILITY("Sichtweite", "https://www.uni-muenster.de/Klima/data/0006vihg_de_html.txt"),
+		WEATHERCODE("Wettercode", "https://www.uni-muenster.de/Klima/data/0007cdhg_de.txt"),
+		WEATHERCODE_DESCRIPTION("Wettercode (Beschreibung)", "https://www.uni-muenster.de/Klima/data/0007cdhg_de_txt.txt"),
+		CLOUD_AMOUNT("Bedeckungsgrad", "https://www.uni-muenster.de/Klima/data/0017behg_de.txt"),
+		CLOUD_HEIGHT("Wolkenhöhe", "https://www.uni-muenster.de/Klima/data/0017whhg_de.txt");
 
 		private final String title;
 		private final String downloadURL;
@@ -70,12 +70,12 @@ public class FileDownloader implements WeatherDataProvider
 	private static final int PRESSURE = 9;
 	private static final String TIMESTAMP_LAST_DOWNLOAD = "timestampLastDownload";
 	private static final String PREFERENCES_FILENAME = "com.klimastation.app";
-	private static final String FILENAME_24H = "http://www.uni-muenster.de/Klima/data/CR3000_Data24h.dat";
-	private static final String FILENAME_5D = "http://www.uni-muenster.de/Klima/data/CR3000_Data5d.dat";
-	private static final String FILENAME_20D = "http://www.uni-muenster.de/Klima/data/CR3000_Data20d.dat";
-	private static final String FILENAME_POTENTIAL_RADIATION_24h = "http://www.uni-muenster.de/Klima/data/PotRad_24h.txt";
-	private static final String FILENAME_POTENTIAL_RADIATION_5d = "http://www.uni-muenster.de/Klima/data/PotRad_05d.txt";
-	private static final String FILENAME_POTENTIAL_RADIATION_20d = "http://www.uni-muenster.de/Klima/data/PotRad_20d.txt";
+	private static final String FILENAME_24H = "https://www.uni-muenster.de/Klima/data/CR3000_Data24h.dat";
+	private static final String FILENAME_5D = "https://www.uni-muenster.de/Klima/data/CR3000_Data5d.dat";
+	private static final String FILENAME_20D = "https://www.uni-muenster.de/Klima/data/CR3000_Data20d.dat";
+	private static final String FILENAME_POTENTIAL_RADIATION_24h = "https://www.uni-muenster.de/Klima/data/PotRad_24h.txt";
+	private static final String FILENAME_POTENTIAL_RADIATION_5d = "https://www.uni-muenster.de/Klima/data/PotRad_05d.txt";
+	private static final String FILENAME_POTENTIAL_RADIATION_20d = "https://www.uni-muenster.de/Klima/data/PotRad_20d.txt";
 
 	CurrentDataCompletionHandler currentDataCompletionHandler;
 	ArchiveDataCompletionHandler archiveDataCompletionHandler;
