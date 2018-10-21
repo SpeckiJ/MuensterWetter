@@ -18,13 +18,13 @@ public class FontableTextView extends TextView
     {
         super(context, attrs);
     
-        FontUtil.setCustomFont(this, context, attrs, R.styleable.com_ifgi_klimastationms_FontableTextView, R.styleable.com_ifgi_klimastationms_FontableTextView_font);
+        FontUtil.setCustomFont(this, context, attrs, R.styleable.com_ifgi_klimastationms_FontableTextView, R.styleable.com_ifgi_klimastationms_FontableTextView_fontName);
     }
 
     public FontableTextView(Context context, AttributeSet attrs, int defStyle)
     {
         super(context, attrs, defStyle);
     
-        FontUtil.setCustomFont(this, context, attrs, R.styleable.com_ifgi_klimastationms_FontableTextView, R.styleable.com_ifgi_klimastationms_FontableTextView_font);
+        FontUtil.setCustomFont(this, context, attrs, R.styleable.com_ifgi_klimastationms_FontableTextView, R.styleable.com_ifgi_klimastationms_FontableTextView_fontName);
     }
 }

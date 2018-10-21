@@ -6,4 +6,7 @@ Get it at [Google Play](https://play.google.com/store/apps/details?id=com.ifgi.k
 
 ## Building
 
-This is an Android Studio project with build target API 19 (Android 4.4), build tools version 22.
+This is an Android Studio project with build configuration:
+ * targetSdkVersion 26 (Android 8.0)
+ * build tools version 22.0.
+ * minSdkVersion 14 (Android 4.0)

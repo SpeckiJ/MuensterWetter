@@ -5,7 +5,7 @@
     android:id="@+id/relativeLayout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    tools:context=".MainActivity" >
+    tools:context="MainActivity" >
 
     <RelativeLayout
         android:id="@+id/buttonRelativeLayout"
@@ -61,7 +61,7 @@
         android:shadowRadius="@dimen/shadowRadius"
         android:textColor="@color/textMain"
         android:textSize="@dimen/textSizeExtraLarge"
-        app:font="SourceSansPro-ExtraLight.ttf" />
+        app:fontName="SourceSansPro-ExtraLight.ttf" />
 
     <com.ifgi.klimastationms.views.FontableTextView
         android:id="@+id/timeStampTextView"
@@ -75,7 +75,7 @@
         android:shadowRadius="@dimen/shadowRadius"
         android:textColor="@color/textMain"
         android:textSize="@dimen/textSizeSecondary"
-        app:font="SourceSansPro-Regular.ttf" />
+        app:fontName="SourceSansPro-Regular.ttf" />
 
     <GridView
         android:id="@+id/weatherDataGridView"

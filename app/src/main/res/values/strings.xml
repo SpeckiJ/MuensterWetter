@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">MünsterWetter</string>
-    <string name="version">1.0.3</string>
+    <string name="version">1.0.5</string>
     <string name="database_name">weather_database</string>
     <string name="webcam_url">http://geo1-dach-kamera.uni-muenster.de/record/current.jpg</string>
     <string name="content_description_info_button">Info Button</string>
@@ -31,6 +31,7 @@
     <string name="about_klima_ag_name">AG Klimatologie</string>
     <string name="about_button_station">Infos zur Wetterstation</string>
     <string name="about_button_license">Über die Daten</string>
+    <string name="about_button_information">Infos zur App</string>
     <string name="about_license_description_one">Bei den Daten handelt es sich um unkorrigierte Rohdaten. Sie werden unter der "Public Domain Dedication and License v1.0" zur Verfügung gestellt. Die Lizenz kann im Folgenden eingesehen werden:</string>
 	<string name="about_license_button_summary">Zusammenfassung</string>
     <string name="about_license_button_full">Vollständige Version</string>

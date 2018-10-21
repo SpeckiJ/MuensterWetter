@@ -4,10 +4,9 @@ android {
     compileSdkVersion 22
     defaultConfig {
         applicationId "com.ifgi.klimastationms"
-        minSdkVersion 7
-        targetSdkVersion 22
-        versionCode 104
-        versionName '1.0.4'
+        minSdkVersion 14
+        versionCode 105
+        versionName '1.0.5'
     }
     buildTypes {
         release {
@@ -20,5 +19,5 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:22.0.0'
+    api 'com.android.support:support-v4:22.0.0'
 }

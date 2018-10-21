@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="font" format="string" />
+    <attr name="fontName" format="string" />
     <declare-styleable name="com.ifgi.klimastationms.FontableTextView">
-        <attr name="font"/>
+        <attr name="fontName"/>
     </declare-styleable>
     <declare-styleable name="com.ifgi.klimastationms.FontableButton">
-        <attr name="font"/>
+        <attr name="fontName"/>
     </declare-styleable>
 </resources>

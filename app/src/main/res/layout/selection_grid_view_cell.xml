@@ -18,5 +18,5 @@
         android:shadowRadius="@dimen/shadowRadius"
         android:textColor="@color/textMain"
         android:textSize="@dimen/textSizeSecondary"
-        app:font="SourceSansPro-Regular.ttf" />
+        app:fontName="SourceSansPro-Regular.ttf" />
 </RelativeLayout>

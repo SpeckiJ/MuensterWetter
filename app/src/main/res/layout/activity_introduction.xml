@@ -22,7 +22,7 @@
         android:text="@string/introduction_title"
         android:textColor="@color/textMain"
         android:textSize="@dimen/textSizeLarge"
-        app:font="SourceSansPro-Light.ttf" />
+        app:fontName="SourceSansPro-Light.ttf" />
 
     <com.ifgi.klimastationms.views.FontableTextView
         android:id="@+id/welcomeTextView"
@@ -39,7 +39,7 @@
         android:text="@string/introduction_message_top"
         android:textColor="@color/textMain"
         android:textSize="@dimen/textSizePrimary"
-        app:font="SourceSansPro-Regular.ttf" />
+        app:fontName="SourceSansPro-Regular.ttf" />
 
     <ImageView
         android:id="@+id/dataImageView"
@@ -76,7 +76,7 @@
         android:text="@string/introduction_message_bottom"
         android:textColor="@color/textMain"
         android:textSize="@dimen/textSizePrimary"
-        app:font="SourceSansPro-Regular.ttf" />
+        app:fontName="SourceSansPro-Regular.ttf" />
 
     <Button
         android:id="@+id/startButton"

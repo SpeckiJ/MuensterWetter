@@ -62,5 +62,16 @@ public class AboutActivity extends Activity
 				startActivity(intent);
 			}
 		});
+
+		Button appDescriptionButton = (Button)this.findViewById(R.id.buttonIntroduction);
+		appDescriptionButton.setOnClickListener(new OnClickListener()
+		{
+			@Override
+			public void onClick(View v)
+			{
+				Intent intent = new Intent(AboutActivity.this, IntroductionActivity.class);
+				startActivity(intent);
+			}
+		});
 	}
 }

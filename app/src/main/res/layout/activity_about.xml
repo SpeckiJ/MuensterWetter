@@ -21,7 +21,7 @@
         android:text="@string/app_name"
         android:textColor="@color/textMain"
         android:textSize="@dimen/textSizeLarge"
-        app:font="SourceSansPro-Light.ttf" />
+        app:fontName="SourceSansPro-Light.ttf" />
 
     <com.ifgi.klimastationms.views.FontableTextView
         android:id="@+id/descriptionTextViewTop"
@@ -39,7 +39,58 @@
         android:text="@string/about_top_description"
         android:textColor="@color/textMain"
         android:textSize="@dimen/textSizePrimary"
-        app:font="SourceSansPro-Regular.ttf" />
+        app:fontName="SourceSansPro-Regular.ttf" />
+
+    <Button
+        android:id="@+id/buttonIntroduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descriptionTextViewTop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:background="@color/graphGridColor"
+        android:padding="10dp"
+        android:shadowColor="@color/textShadow"
+        android:shadowDx="@dimen/shadowOffsetX"
+        android:shadowDy="@dimen/shadowOffsetY"
+        android:shadowRadius="@dimen/shadowRadius"
+        android:text="@string/about_button_information"
+        android:textColor="@color/textMain"
+        android:textSize="@dimen/textSizeTitle" />
+
+    <Button
+        android:id="@+id/buttonStation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonIntroduction"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@color/graphGridColor"
+        android:padding="10dp"
+        android:shadowColor="@color/textShadow"
+        android:shadowDx="@dimen/shadowOffsetX"
+        android:shadowDy="@dimen/shadowOffsetY"
+        android:shadowRadius="@dimen/shadowRadius"
+        android:text="@string/about_button_station"
+        android:textColor="@color/textMain"
+        android:textSize="@dimen/textSizeTitle" />
+
+    <Button
+        android:id="@+id/buttonLicense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonStation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@color/graphGridColor"
+        android:padding="10dp"
+        android:shadowColor="@color/textShadow"
+        android:shadowDx="@dimen/shadowOffsetX"
+        android:shadowDy="@dimen/shadowOffsetY"
+        android:shadowRadius="@dimen/shadowRadius"
+        android:text="@string/about_button_license"
+        android:textColor="@color/textMain"
+        android:textSize="@dimen/textSizeTitle" />
 
     <RelativeLayout
         android:id="@+id/buttonRelativeLayout"
@@ -47,7 +98,7 @@
         android:layout_height="@dimen/logoLayoutHeight"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/descriptionTextViewTop" >
+        android:layout_below="@id/buttonLicense" >
 
         <ImageButton
             android:id="@+id/imageButtoniLoek"
@@ -82,39 +133,5 @@
             android:scaleType="fitCenter"
             android:src="@drawable/logo_kli" />
     </RelativeLayout>
-
-    <Button
-        android:id="@+id/buttonStation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buttonRelativeLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:background="@color/graphGridColor"
-        android:padding="15dp"
-        android:shadowColor="@color/textShadow"
-        android:shadowDx="@dimen/shadowOffsetX"
-        android:shadowDy="@dimen/shadowOffsetY"
-        android:shadowRadius="@dimen/shadowRadius"
-        android:text="@string/about_button_station"
-        android:textColor="@color/textMain"
-        android:textSize="@dimen/textSizeTitle" />
-
-    <Button
-        android:id="@+id/buttonLicense"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buttonStation"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:background="@color/graphGridColor"
-        android:padding="15dp"
-        android:shadowColor="@color/textShadow"
-        android:shadowDx="@dimen/shadowOffsetX"
-        android:shadowDy="@dimen/shadowOffsetY"
-        android:shadowRadius="@dimen/shadowRadius"
-        android:text="@string/about_button_license"
-        android:textColor="@color/textMain"
-        android:textSize="@dimen/textSizeTitle" />
 
 </RelativeLayout>

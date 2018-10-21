@@ -21,7 +21,7 @@
         android:shadowRadius="@dimen/shadowRadius"
         android:textColor="@color/textMain"
         android:textSize="@dimen/textSizeTitle"
-        app:font="SourceSansPro-Bold.ttf" />
+        app:fontName="SourceSansPro-Bold.ttf" />
 
     <com.ifgi.klimastationms.views.FontableTextView
         android:id="@+id/textViewInfoDetail"
@@ -35,5 +35,5 @@
         android:shadowRadius="@dimen/shadowRadius"
         android:textColor="@color/textMain"
         android:textSize="@dimen/textSizePrimary"
-        app:font="SourceSansPro-Regular.ttf" />
+        app:fontName="SourceSansPro-Regular.ttf" />
 </RelativeLayout>

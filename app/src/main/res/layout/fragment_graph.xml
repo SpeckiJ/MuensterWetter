@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="10dp"
-    tools:context=".GraphActivity" >
+    tools:context="GraphActivity" >
 
     <GridView
         android:id="@+id/selectionGridView"
@@ -38,7 +38,7 @@
         android:text="@string/seekBarLeftLabel"
         android:textColor="@color/textMain"
         android:textSize="@dimen/textSizeSecondary"
-        app:font="SourceSansPro-Regular.ttf" />
+        app:fontName="SourceSansPro-Regular.ttf" />
 
     <com.ifgi.klimastationms.views.FontableTextView
         android:id="@+id/rightTimeLabel"
@@ -56,7 +56,7 @@
         android:text="@string/seekBarRightLabel"
         android:textColor="@color/textMain"
         android:textSize="@dimen/textSizeSecondary"
-        app:font="SourceSansPro-Regular.ttf" />
+        app:fontName="SourceSansPro-Regular.ttf" />
 
     <SeekBar
         android:id="@+id/seekBar"

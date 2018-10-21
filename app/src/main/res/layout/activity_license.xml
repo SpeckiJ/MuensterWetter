@@ -21,7 +21,7 @@
         android:text="@string/about_button_license"
         android:textColor="@color/textMain"
         android:textSize="@dimen/textSizeLarge"
-        app:font="SourceSansPro-Light.ttf" />
+        app:fontName="SourceSansPro-Light.ttf" />
 
     <com.ifgi.klimastationms.views.FontableTextView
         android:id="@+id/descriptionTextViewOne"
@@ -38,7 +38,7 @@
         android:text="@string/about_license_description_one"
         android:textColor="@color/textMain"
         android:textSize="@dimen/textSizePrimary"
-        app:font="SourceSansPro-Regular.ttf" />
+        app:fontName="SourceSansPro-Regular.ttf" />
 
     <Button
         android:id="@+id/buttonLinkLicenseSummary"
